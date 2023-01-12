@@ -11,7 +11,7 @@ module.exports = {
         const { body } = ctx.request;
         
         let res
-
+        
         let contact  = await strapi.services.customer.create({
             from_email: body.from_email,
             from_name: body.from_name,

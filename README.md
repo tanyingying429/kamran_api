@@ -24,7 +24,7 @@ Note: Since I created the free account, sometimes email transfer mayn't work and
 
 ## A screenshot/gif of what was made
 
-<a href="https://drive.google.com/file/d/13sgBdLV0V8ihsPQoOKhhd9zYAahLeXi6/view?usp=sharing"target="_blank">Here</a> is a video showing the customer database and api permission.
+<a href="https://drive.google.com/file/d/13sgBdLV0V8ihsPQoOKhhd9zYAahLeXi6/view?usp=sharing" target="_blank">Here</a> is a video showing the customer database and api permission.
 
 ## What you would do if you had more time
 

@@ -1,0 +1,135 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": false
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": false
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "user_reference": {
+      "type": "string"
+    },
+    "membership": {
+      "type": "enumeration",
+      "enum": [
+        "Free",
+        "Standard",
+        "Pro"
+      ]
+    },
+    "membership_at": {
+      "type": "date"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "is_crypto": {
+      "type": "boolean"
+    },
+    "point": {
+      "type": "integer",
+      "default": 0
+    },
+    "payment_confirmed": {
+      "type": "boolean"
+    },
+    "cid": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "suite": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "vat": {
+      "type": "string"
+    },
+    "purchase_order": {
+      "type": "string"
+    },
+    "card_info": {
+      "type": "json"
+    },
+    "subscription_info": {
+      "type": "json"
+    }
+  }
+}

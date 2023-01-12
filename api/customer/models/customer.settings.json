@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "from_email": {
+      "type": "email"
+    },
+    "from_name": {
+      "type": "string"
+    },
+    "to_name": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "to_email": {
+      "type": "email"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "is_success": {
+      "type": "boolean"
+    }
+  }
+}

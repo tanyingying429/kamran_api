@@ -1,0 +1,62 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/auth/local/saveUser",
+      "handler": "Auth.saveUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/app",
+      "handler": "Auth.authApp",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/local/getUser/:id",
+      "handler": "Auth.getUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/google",
+      "handler": "Auth.getGoogle",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.ratelimit"
+        ],
+        "prefix": "",
+        "description": "Login by google",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "create"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/callback/google",
+      "handler": "Auth.getGoogleCallback",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.ratelimit"
+        ],
+        "prefix": "",
+        "description": "Login Callback by google",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "create"
+        }
+      }
+    }
+  ]
+}
